@@ -1,0 +1,2621 @@
+
+/* =========================================
+   SMARTCARE VFX PREMIUM DESIGN
+========================================= */
+
+.vfx-home {
+  background: #fff;
+  color: #17344c;
+  overflow: hidden;
+}
+
+/* NAVBAR UPGRADE */
+
+.vfx-navbar {
+  box-shadow: 0 5px 25px rgba(21, 65, 91, 0.045);
+}
+
+.vfx-navbar .hospital-logo-icon {
+  width: 43px;
+  height: 43px;
+  background: linear-gradient(135deg, #087fbd, #28c7d8);
+  color: white;
+  border-radius: 13px;
+  box-shadow: 0 5px 18px #087fbd35;
+}
+
+.vfx-navbar .hospital-logo strong {
+  color: #173c56;
+}
+
+/* =========================================
+   HERO BACKGROUND VFX
+========================================= */
+
+.vfx-hero {
+  min-height: 610px;
+  padding: 65px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 80% 40%, #d9f3ff 0%, transparent 42%),
+    radial-gradient(ellipse at 10% 80%, #e4f8fa 0%, transparent 38%),
+    linear-gradient(120deg, #f7fcff, #edf7fc 60%, #f9fdff);
+}
+
+.vfx-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.20;
+  background-image:
+    linear-gradient(#70b8d31b 1px, transparent 1px),
+    linear-gradient(90deg, #70b8d31b 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to right, transparent, black, transparent);
+}
+
+.vfx-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(75px);
+  z-index: -1;
+  pointer-events: none;
+  animation: glowPulse 7s ease-in-out infinite alternate;
+}
+
+.glow-one {
+  width: 260px;
+  height: 260px;
+  background: #7ce5f2;
+  top: 0;
+  right: 10%;
+  opacity: 0.23;
+}
+
+.glow-two {
+  width: 200px;
+  height: 200px;
+  background: #7bb9ff;
+  bottom: 0;
+  left: 20%;
+  opacity: 0.20;
+  animation-delay: 2s;
+}
+
+@keyframes glowPulse {
+  from { transform: scale(0.9); opacity: 0.13; }
+  to { transform: scale(1.25); opacity: 0.30; }
+}
+
+/* FLOATING MEDICAL ICONS */
+
+.floating-medical-icon {
+  position: absolute;
+  z-index: -1;
+  display: grid;
+  place-items: center;
+  color: #159fc0;
+  background: rgba(255, 255, 255, 0.52);
+  border: 1px solid rgba(255,255,255,.85);
+  border-radius: 17px;
+  box-shadow: 0 10px 30px #167ba51a;
+  backdrop-filter: blur(10px);
+  animation: medicalFloat 6s ease-in-out infinite;
+}
+
+.floating-medical-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.float-one {
+  width: 55px;
+  height: 55px;
+  top: 12%;
+  left: 48%;
+}
+
+.float-two {
+  width: 42px;
+  height: 42px;
+  bottom: 13%;
+  left: 46%;
+  animation-delay: 1s;
+}
+
+.float-three {
+  width: 48px;
+  height: 48px;
+  top: 15%;
+  right: 7%;
+  animation-delay: 2s;
+}
+
+.float-four {
+  width: 45px;
+  height: 45px;
+  bottom: 15%;
+  right: 8%;
+  animation-delay: 3s;
+}
+
+.float-five {
+  width: 48px;
+  height: 48px;
+  top: 50%;
+  left: 3%;
+  animation-delay: 1.5s;
+}
+
+@keyframes medicalFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(5deg);
+  }
+}
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.vfx-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.vfx-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 15px;
+  background: rgba(255,255,255,.75);
+  border: 1px solid #d7eaf3;
+  border-radius: 40px;
+  color: #1684a9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 20px #1e7ba510;
+  backdrop-filter: blur(10px);
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: #23c99a;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #23c99a;
+  animation: dotBlink 1.5s infinite;
+}
+
+@keyframes dotBlink {
+  50% { opacity: .35; }
+}
+
+.vfx-hero-content h1 {
+  font-size: clamp(48px, 5.3vw, 72px);
+  line-height: 1.12;
+  letter-spacing: -3px;
+  font-weight: 800;
+  color: #16364f;
+  margin: 28px 0 22px;
+}
+
+.gradient-heading {
+  background: linear-gradient(90deg, #087fbd, #19b9c9, #36a9dd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.vfx-description {
+  max-width: 490px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #718899;
+}
+
+.vfx-hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.vfx-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 15px 21px;
+  color: white;
+  background: linear-gradient(110deg, #087fbd, #12a8c9);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 9px 25px #087fbd38;
+  transition: .3s ease;
+}
+
+.vfx-primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px #087fbd55;
+}
+
+.vfx-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 20px;
+  border: 1px solid #c8e2ed;
+  background: rgba(255,255,255,.75);
+  border-radius: 10px;
+  color: #18799d;
+  font-size: 13px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.vfx-secondary-btn:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+/* TRUST */
+
+.vfx-trust-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 37px;
+}
+
+.trust-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #e0f4f7;
+  color: #088cad;
+  display: grid;
+  place-items: center;
+}
+
+.vfx-trust-row strong,
+.vfx-trust-row span {
+  display: block;
+}
+
+.vfx-trust-row strong {
+  color: #31516a;
+  font-size: 12px;
+}
+
+.vfx-trust-row span {
+  color: #91a1ae;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+/* =========================================
+   DOCTOR IMAGE VFX
+========================================= */
+
+.vfx-hero-visual {
+  min-width: 0;
+  height: 450px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-image-frame {
+  width: 86%;
+  height: 385px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px 90px 30px 90px;
+  border: 6px solid rgba(255,255,255,.8);
+  box-shadow:
+    0 25px 65px rgba(20, 96, 132, .17),
+    0 0 45px rgba(35, 187, 217, .14);
+  z-index: 2;
+  animation: imageFloat 7s ease-in-out infinite;
+}
+
+.doctor-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  transition: transform 1s ease;
+}
+
+.doctor-image-frame:hover img {
+  transform: scale(1.06);
+}
+
+@keyframes imageFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+.doctor-image-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 45%,
+    rgba(8, 42, 65, .57) 100%
+  );
+}
+
+.doctor-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,.88);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 14px;
+}
+
+.caption-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  color: #0c91b9;
+  background: #e4f6fa;
+  border-radius: 12px;
+}
+
+.doctor-caption strong,
+.doctor-caption span {
+  display: block;
+}
+
+.doctor-caption strong {
+  color: #27475c;
+  font-size: 12px;
+}
+
+.doctor-caption span {
+  color: #8499a8;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.verified-icon {
+  color: #14a98c;
+  margin-left: auto;
+}
+
+/* ORBIT EFFECT */
+
+.visual-orbit {
+  position: absolute;
+  border: 1px solid #55bdd255;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orbit-one {
+  width: 450px;
+  height: 450px;
+  animation: orbitSpin 25s linear infinite;
+}
+
+.orbit-two {
+  width: 395px;
+  height: 395px;
+  border-style: dashed;
+  border-color: #55bdd238;
+  animation: orbitSpin 35s linear infinite reverse;
+}
+
+@keyframes orbitSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* FLOATING CARDS */
+
+.vfx-float-card {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px 17px;
+  background: rgba(255,255,255,.86);
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 12px 35px rgba(17, 77, 108, .13);
+  animation: medicalFloat 6s ease-in-out infinite;
+}
+
+.float-card-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  color: #098db8;
+  background: #e5f5fa;
+  border-radius: 11px;
+}
+
+.vfx-float-card strong,
+.vfx-float-card span {
+  display: block;
+}
+
+.vfx-float-card strong {
+  color: #27475e;
+  font-size: 11px;
+}
+
+.vfx-float-card span {
+  color: #8a9ca9;
+  font-size: 9px;
+  margin-top: 5px;
+}
+
+.appointment-float {
+  top: 55px;
+  left: -25px;
+}
+
+.care-float {
+  bottom: 48px;
+  right: -20px;
+  animation-delay: 2s;
+}
+
+.vfx-circle-label {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  background: linear-gradient(145deg, #087fbd, #24bdca);
+  border: 4px solid white;
+  box-shadow: 0 8px 25px #087fbd40;
+  z-index: 4;
+  animation: medicalFloat 5s ease-in-out infinite;
+}
+
+.vfx-circle-label span {
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* =========================================
+   SERVICES STRIP
+========================================= */
+
+.vfx-services-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 35px 8%;
+  background: white;
+  border-bottom: 1px solid #eaf1f5;
+}
+
+.vfx-service-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.vfx-service-icon {
+  min-width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #e8f7fc, #f0fbfd);
+  color: #078ab4;
+  transition: .3s;
+}
+
+.vfx-service-item:hover .vfx-service-icon {
+  background: linear-gradient(135deg, #078fbd, #25b7cc);
+  color: white;
+  transform: translateY(-5px) rotate(-5deg);
+}
+
+.vfx-service-item h3 {
+  color: #29485e;
+  font-size: 13px;
+  margin: 3px 0 8px;
+}
+
+.vfx-service-item p {
+  color: #8a9ba8;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   DEPARTMENTS
+========================================= */
+
+.vfx-departments {
+  padding: 90px 8%;
+  background:
+    radial-gradient(circle at 10% 10%, #e9f8fc 0, transparent 35%),
+    #f9fcfe;
+}
+
+.vfx-section-heading {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.vfx-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #088bb3;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.vfx-section-heading h2 {
+  color: #193b55;
+  font-size: clamp(27px, 3.5vw, 39px);
+  margin: 17px 0 13px;
+  letter-spacing: -1px;
+}
+
+.vfx-section-heading h2 span {
+  color: #0b9abb;
+}
+
+.vfx-section-heading p {
+  color: #8194a1;
+  font-size: 13px;
+}
+
+.vfx-department-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.vfx-department-card {
+  padding: 28px;
+  border: 1px solid #e6eff4;
+  border-radius: 17px;
+  background: rgba(255,255,255,.88);
+  box-shadow: 0 7px 25px rgba(28, 76, 101, .035);
+  transition: .35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.vfx-department-card::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #e5f8fc;
+  top: -65px;
+  right: -65px;
+  transition: .4s;
+}
+
+.vfx-department-card:hover {
+  transform: translateY(-8px);
+  border-color: #8bd5e8;
+  box-shadow: 0 18px 40px rgba(24, 120, 160, .11);
+}
+
+.vfx-department-card:hover::after {
+  transform: scale(2.1);
+}
+
+.vfx-department-icon {
+  width: 57px;
+  height: 57px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #e2f5fb, #edfbfc);
+  color: #078ab4;
+  border-radius: 15px;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 1;
+  transition: .3s;
+}
+
+.vfx-department-card:hover .vfx-department-icon {
+  color: white;
+  background: linear-gradient(135deg, #078bbd, #2abbd0);
+  transform: rotate(-7deg);
+}
+
+.vfx-department-card h3 {
+  color: #28475e;
+  font-size: 16px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.vfx-department-card p {
+  color: #8799a6;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 1;
+}
+
+.vfx-explore {
+  color: #078ab4;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   ABOUT SMARTCARE
+========================================= */
+
+.vfx-about {
+  padding: 90px 9%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+  background: white;
+}
+
+.vfx-about-visual {
+  min-height: 350px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #e1f3f8, #f1fbfc);
+  overflow: hidden;
+}
+
+.about-glow {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background: #62cfe5;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: .35;
+  animation: glowPulse 6s infinite alternate;
+}
+
+.about-main-icon {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.85);
+  color: #0b99bb;
+  border: 1px solid white;
+  box-shadow: 0 20px 60px #1685ae25;
+  z-index: 1;
+  animation: medicalFloat 6s ease-in-out infinite;
+}
+
+.about-floating-icon {
+  position: absolute;
+  top: 45px;
+  right: 55px;
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: white;
+  color: #0c9eac;
+  box-shadow: 0 10px 30px #167ba51b;
+}
+
+.about-floating-text {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  padding: 13px 17px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  color: #31566d;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 10px 25px #167ba51b;
+}
+
+.about-floating-text svg {
+  color: #10a78e;
+}
+
+.vfx-about-content h2 {
+  color: #193b55;
+  font-size: clamp(29px, 3vw, 40px);
+  line-height: 1.35;
+  margin: 18px 0;
+  letter-spacing: -1px;
+}
+
+.vfx-about-content h2 span {
+  color: #0c9abb;
+}
+
+.vfx-about-content > p {
+  color: #8295a3;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.about-benefits {
+  display: grid;
+  gap: 17px;
+  margin: 27px 0;
+}
+
+.about-benefits span {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #47647a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.about-benefits svg {
+  color: #0c9cbb;
+}
+
+.about-cta {
+  margin-top: 5px;
+}
+
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.vfx-doctor-cta {
+  padding: 48px 8%;
+  margin: 20px 8% 70px;
+  background: linear-gradient(110deg, #075c91, #087fbd, #19b4c5);
+  color: white;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 18px 45px #087fbd28;
+}
+
+.cta-decoration {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border: 1px solid #ffffff22;
+  border-radius: 50%;
+  right: 15%;
+  top: -160px;
+  box-shadow: 0 0 0 30px #ffffff09, 0 0 0 60px #ffffff06;
+}
+
+.vfx-doctor-cta > div:not(.cta-decoration) {
+  position: relative;
+  z-index: 1;
+}
+
+.vfx-doctor-cta span {
+  color: #b9edff;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+}
+
+.vfx-doctor-cta h2 {
+  font-size: 26px;
+  margin: 12px 0;
+}
+
+.vfx-doctor-cta p {
+  color: #d9f0fa;
+  font-size: 12px;
+}
+
+.vfx-cta-button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 21px;
+  background: white;
+  color: #087eae;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+  transition: .3s;
+}
+
+.vfx-cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px #003b5c30;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.vfx-footer {
+  background: #102c42;
+  padding: 48px 8%;
+}
+
+.vfx-footer .footer-logo {
+  color: white;
+  justify-content: center;
+}
+
+.vfx-footer .footer-logo svg {
+  color: #4bc9dc;
+}
+
+.vfx-footer p {
+  margin: 15px 0;
+  color: #b7cbd8;
+}
+
+.vfx-footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin: 22px 0;
+  color: #d8e7ef;
+  font-size: 11px;
+}
+
+.vfx-footer-links a:hover {
+  color: #57d3e5;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .vfx-hero {
+    gap: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .vfx-hero-content h1 {
+    font-size: 53px;
+  }
+
+  .doctor-image-frame {
+    width: 90%;
+    height: 340px;
+  }
+
+  .vfx-float-card {
+    padding: 10px;
+  }
+
+  .vfx-department-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vfx-about {
+    gap: 35px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .vfx-hero {
+    grid-template-columns: 1fr;
+    padding: 55px 7% 65px;
+    gap: 40px;
+  }
+
+  .vfx-hero-content h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+
+  .vfx-description {
+    font-size: 13px;
+  }
+
+  .vfx-hero-visual {
+    height: 370px;
+  }
+
+  .doctor-image-frame {
+    height: 315px;
+    width: 85%;
+    border-radius: 25px 65px 25px 65px;
+  }
+
+  .orbit-one {
+    width: 350px;
+    height: 350px;
+  }
+
+  .orbit-two {
+    width: 320px;
+    height: 320px;
+  }
+
+  .appointment-float {
+    left: -5px;
+    top: 25px;
+  }
+
+  .care-float {
+    right: -5px;
+    bottom: 25px;
+  }
+
+  .vfx-circle-label {
+    width: 68px;
+    height: 68px;
+    right: -5px;
+  }
+
+  .floating-medical-icon {
+    opacity: .65;
+  }
+
+  .float-one {
+    left: auto;
+    right: 15%;
+    top: 5%;
+  }
+
+  .float-three,
+  .float-five {
+    display: none;
+  }
+
+  .vfx-services-strip {
+    grid-template-columns: 1fr;
+    padding: 35px 8%;
+    gap: 25px;
+  }
+
+  .vfx-departments {
+    padding: 65px 7%;
+  }
+
+  .vfx-department-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .vfx-about {
+    grid-template-columns: 1fr;
+    padding: 60px 7%;
+    gap: 35px;
+  }
+
+  .vfx-about-visual {
+    min-height: 290px;
+  }
+
+  .vfx-about-content h2 {
+    font-size: 30px;
+  }
+
+  .vfx-doctor-cta {
+    margin: 10px 5% 50px;
+    padding: 35px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .vfx-doctor-cta h2 {
+    font-size: 23px;
+  }
+
+  .vfx-footer-links {
+    gap: 18px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+  .vfx-hero-content h1 {
+    font-size: 41px;
+  }
+
+  .vfx-primary-btn,
+  .vfx-secondary-btn {
+    padding: 13px 14px;
+    font-size: 11px;
+  }
+
+  .doctor-caption {
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+
+  .vfx-float-card {
+    gap: 7px;
+    padding: 9px;
+  }
+
+  .vfx-float-card strong {
+    font-size: 9px;
+  }
+
+  .vfx-float-card span {
+    font-size: 8px;
+  }
+}
+
+/* ACCESSIBILITY: REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .vfx-home *,
+  .vfx-home *::before,
+  .vfx-home *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================
+   SMARTCARE HEADER COMPLETE FIX
+========================================= */
+
+.vfx-home,
+.vfx-home * {
+  box-sizing: border-box;
+}
+
+.vfx-home {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.vfx-home a {
+  text-decoration: none !important;
+}
+
+/* TOP CONTACT BAR */
+
+.vfx-home .hospital-topbar {
+  width: 100%;
+  min-height: 38px;
+  height: auto;
+  padding: 8px 6%;
+  background: #14283c !important;
+  color: #e5f0f7 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 15px;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 11px !important;
+  line-height: 1.5;
+}
+
+.vfx-home .topbar-left {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap;
+  gap: 25px !important;
+}
+
+.vfx-home .topbar-left span {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  white-space: nowrap;
+  color: #e5f0f7 !important;
+}
+
+.vfx-home .topbar-left svg {
+  color: #50c4db;
+}
+
+.vfx-home .topbar-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  white-space: nowrap;
+  color: #e5f0f7 !important;
+}
+
+.vfx-home .topbar-right a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+
+.vfx-home .topbar-right a:hover {
+  color: #4bc9dc !important;
+}
+
+/* MAIN NAVIGATION */
+
+.vfx-home .hospital-navbar {
+  width: 100%;
+  min-height: 78px;
+  height: auto;
+  padding: 12px 6% !important;
+  background: rgba(255,255,255,.97) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 25px;
+  border-bottom: 1px solid #e9f0f4 !important;
+  box-shadow: 0 5px 25px rgba(20,60,90,.05) !important;
+  position: relative;
+  z-index: 10;
+}
+
+/* LOGO */
+
+.vfx-home .hospital-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+  color: #087fbd !important;
+  flex-shrink: 0;
+}
+
+.vfx-home .hospital-logo-icon {
+  width: 43px;
+  height: 43px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  color: white !important;
+  background: linear-gradient(135deg,#087fbd,#24bdca);
+  border-radius: 13px;
+  box-shadow: 0 5px 16px #087fbd30;
+}
+
+.vfx-home .hospital-logo strong {
+  display: block !important;
+  color: #173b54 !important;
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  line-height: 1.2;
+}
+
+.vfx-home .hospital-logo small {
+  display: block !important;
+  color: #8297a5 !important;
+  font-size: 8px !important;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+/* NAVIGATION LINKS */
+
+.vfx-home .hospital-nav-links {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 24px !important;
+}
+
+.vfx-home .hospital-nav-links a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px;
+  color: #526b7d !important;
+  text-decoration: none !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  white-space: nowrap;
+  transition: color .25s ease;
+}
+
+.vfx-home .hospital-nav-links a:hover,
+.vfx-home .hospital-nav-links a.active {
+  color: #078cba !important;
+}
+
+/* NAVIGATION ACTIONS */
+
+.vfx-home .hospital-nav-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end;
+  gap: 17px !important;
+  flex-shrink: 0;
+}
+
+.vfx-home .search-button {
+  width: 38px;
+  height: 38px;
+  display: grid !important;
+  place-items: center;
+  background: #f0f8fb !important;
+  color: #087fbd !important;
+  border: 1px solid #e1eff5 !important;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.vfx-home .search-button:hover {
+  background: #087fbd !important;
+  color: white !important;
+}
+
+.vfx-home .appointment-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 20px !important;
+  background: linear-gradient(110deg,#087fbd,#17abc5) !important;
+  color: white !important;
+  border: none;
+  border-radius: 30px;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px #087fbd30;
+  transition: .3s;
+}
+
+.vfx-home .appointment-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px #087fbd45;
+}
+
+/* MOBILE HEADER */
+
+@media (max-width: 900px) {
+  .vfx-home .hospital-navbar {
+    padding: 12px 4% !important;
+    gap: 12px;
+  }
+
+  .vfx-home .hospital-nav-links {
+    gap: 12px !important;
+  }
+
+  .vfx-home .hospital-nav-links a {
+    font-size: 10px !important;
+  }
+
+  .vfx-home .hospital-logo strong {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .vfx-home .hospital-topbar {
+    padding: 8px 4%;
+    font-size: 9px !important;
+  }
+
+  .vfx-home .topbar-left {
+    gap: 8px !important;
+  }
+
+  .vfx-home .topbar-left span:nth-child(n+2) {
+    display: none !important;
+  }
+
+  .vfx-home .hospital-navbar {
+    min-height: 67px;
+    padding: 10px 5% !important;
+  }
+
+  .vfx-home .hospital-nav-links {
+    display: none !important;
+  }
+
+  .vfx-home .hospital-nav-actions {
+    gap: 9px !important;
+  }
+
+  .vfx-home .appointment-button {
+    padding: 11px 13px !important;
+    font-size: 10px !important;
+  }
+}
+
+/* =================================
+   SMARTCARE FONT SIZE UPGRADE
+================================= */
+
+/* Top contact bar */
+.vfx-home .hospital-topbar {
+  font-size: 13px !important;
+}
+
+/* Logo */
+.vfx-home .hospital-logo strong {
+  font-size: 24px !important;
+}
+
+.vfx-home .hospital-logo small {
+  font-size: 9px !important;
+}
+
+/* Navigation links */
+.vfx-home .hospital-nav-links a {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+/* Login and language */
+.vfx-home .topbar-right {
+  font-size: 13px !important;
+}
+
+/* Appointment button */
+.vfx-home .appointment-button {
+  font-size: 13px !important;
+}
+
+/* Hero heading */
+.vfx-home .vfx-hero-content h1 {
+  font-size: clamp(54px, 5.5vw, 76px) !important;
+}
+
+/* Hero description */
+.vfx-home .vfx-description {
+  font-size: 15px !important;
+  line-height: 1.9 !important;
+}
+
+/* Hero buttons */
+.vfx-home .vfx-primary-btn,
+.vfx-home .vfx-secondary-btn {
+  font-size: 14px !important;
+}
+
+/* Floating cards */
+.vfx-home .vfx-float-card strong {
+  font-size: 13px !important;
+}
+
+.vfx-home .vfx-float-card span {
+  font-size: 11px !important;
+}
+
+/* Service section */
+.vfx-home .vfx-service-item h3 {
+  font-size: 15px !important;
+}
+
+.vfx-home .vfx-service-item p {
+  font-size: 12px !important;
+}
+
+/* Department section */
+.vfx-home .vfx-department-card h3 {
+  font-size: 18px !important;
+}
+
+.vfx-home .vfx-department-card p {
+  font-size: 13px !important;
+}
+
+.vfx-home .vfx-explore {
+  font-size: 12px !important;
+}
+
+/* About section */
+.vfx-home .vfx-about-content h2 {
+  font-size: 38px !important;
+}
+
+.vfx-home .vfx-about-content > p {
+  font-size: 14px !important;
+}
+
+.vfx-home .about-benefits span {
+  font-size: 14px !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 700px) {
+  .vfx-home .hospital-nav-links a {
+    font-size: 13px !important;
+  }
+
+  .vfx-home .vfx-hero-content h1 {
+    font-size: 49px !important;
+  }
+
+  .vfx-home .vfx-description {
+    font-size: 14px !important;
+  }
+
+  .vfx-home .vfx-about-content h2 {
+    font-size: 30px !important;
+  }
+}
+
+/* =========================================
+   SMARTCARE AUTHENTICATION DESIGN
+========================================= */
+
+.sc-auth-login,
+.sc-signup-page {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.sc-auth-login {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  min-height: 100vh;
+  background: #f5f6fa;
+}
+
+/* LOGIN LEFT PANEL */
+
+.sc-login-visual {
+  position: relative;
+  overflow: hidden;
+  padding: 45px 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(145deg, #3656f5, #2447e7);
+  color: white;
+}
+
+.sc-login-visual::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 1px solid #ffffff25;
+  right: -160px;
+  top: 20%;
+  box-shadow: 0 0 0 40px #ffffff09,
+              0 0 0 80px #ffffff06;
+}
+
+.sc-auth-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 23px;
+  font-weight: 800;
+  position: relative;
+  z-index: 2;
+}
+
+.sc-login-art {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sc-login-art img {
+  position: relative;
+  width: 80%;
+  height: 275px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 130px 130px 30px 30px;
+  border: 5px solid #ffffff35;
+  z-index: 1;
+  box-shadow: 0 20px 45px #122e9c40;
+}
+
+.sc-art-circle {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #8297ff;
+  opacity: .45;
+  filter: blur(25px);
+}
+
+.sc-art-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 5%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #ffffffeb;
+  color: #3153dc;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.sc-login-message {
+  position: relative;
+  z-index: 2;
+}
+
+.sc-login-message h2 {
+  font-size: 25px;
+  margin-bottom: 13px;
+}
+
+.sc-login-message p {
+  font-size: 12px;
+  color: #e1e7ff;
+  line-height: 1.8;
+  max-width: 380px;
+}
+
+.sc-slider-dots {
+  display: flex;
+  gap: 7px;
+  margin-top: 22px;
+}
+
+.sc-slider-dots span {
+  width: 7px;
+  height: 7px;
+  background: #ffffff65;
+  border-radius: 10px;
+}
+
+.sc-slider-dots .active {
+  width: 27px;
+  background: white;
+}
+
+.sc-visual-decoration {
+  position: absolute;
+  right: 30px;
+  top: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  color: #ffffff45;
+}
+
+/* LOGIN RIGHT PANEL */
+
+.sc-login-form-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 9%;
+  background: #ffffff;
+}
+
+.sc-login-form {
+  width: 100%;
+  max-width: 430px;
+}
+
+.sc-mobile-brand {
+  display: none;
+  align-items: center;
+  gap: 9px;
+  color: #3656f5;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 35px;
+}
+
+.sc-form-tag {
+  color: #4161ed;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.sc-login-form h1 {
+  font-size: 30px;
+  color: #19283c;
+  margin: 12px 0 9px;
+}
+
+.sc-form-subtitle {
+  font-size: 12px;
+  color: #8994a3;
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+.sc-login-form form > label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #33445a;
+  margin: 18px 0 9px;
+}
+
+.sc-input-wrap {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 14px;
+  border: 1px solid #e1e5ed;
+  border-radius: 8px;
+  color: #8d9aac;
+  background: #fff;
+  transition: .3s;
+}
+
+.sc-input-wrap:focus-within {
+  border-color: #4565f5;
+  box-shadow: 0 0 0 3px #4565f514;
+}
+
+.sc-input-wrap input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  color: #25374d;
+  background: transparent;
+}
+
+.sc-input-wrap input::placeholder {
+  color: #a3adba;
+}
+
+.sc-eye {
+  border: none;
+  background: transparent;
+  color: #8d9aac;
+  display: flex;
+  cursor: pointer;
+}
+
+.sc-login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0;
+  font-size: 11px;
+}
+
+.sc-remember {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #758397;
+}
+
+.sc-remember input {
+  accent-color: #405ff0;
+}
+
+.sc-login-options a {
+  color: #18a18b;
+  font-weight: 600;
+}
+
+.sc-login-submit {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(100deg, #3555ed, #5270ff);
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: .3s;
+}
+
+.sc-login-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px #405ff044;
+}
+
+.sc-auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 30px 0 18px;
+  color: #9ba5b1;
+  font-size: 11px;
+}
+
+.sc-auth-divider::before,
+.sc-auth-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e9edf2;
+}
+
+.sc-social-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sc-social-buttons button {
+  height: 43px;
+  border: 1px solid #e2e6ec;
+  background: white;
+  border-radius: 7px;
+  color: #45556a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 12px;
+  transition: .3s;
+}
+
+.sc-social-buttons button:hover {
+  border-color: #4565f5;
+  background: #f7f8ff;
+}
+
+.sc-google-icon {
+  font-size: 17px;
+  font-weight: 800;
+  color: #4285f4;
+}
+
+.sc-facebook-icon {
+  font-weight: 900;
+  font-size: 18px;
+  color: #1877f2;
+}
+
+.sc-auth-switch {
+  text-align: center;
+  color: #8995a5;
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+.sc-auth-switch a {
+  color: #15a58e;
+  font-weight: 700;
+}
+
+.sc-login-security {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 38px;
+  font-size: 10px;
+  color: #9ba8b4;
+}
+
+/* =========================================
+   SIGNUP PAGE
+========================================= */
+
+.sc-signup-page {
+  min-height: 100vh;
+  padding: 0 5% 45px;
+  background:
+    radial-gradient(circle at 20% 60%, #5362fa 0, transparent 35%),
+    linear-gradient(110deg, #3738b8, #147cdb 58%, #08c8e7);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.sc-signup-page::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #ffffff25;
+  border-radius: 50%;
+  left: -230px;
+  bottom: -280px;
+  box-shadow: 0 0 0 40px #ffffff08,
+              0 0 0 80px #ffffff05;
+  pointer-events: none;
+}
+
+/* SIGNUP HEADER */
+
+.sc-signup-header {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.sc-signup-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.sc-signup-header nav {
+  display: flex;
+  gap: 30px;
+}
+
+.sc-signup-header nav a {
+  color: #e5f7ff;
+  font-size: 11px;
+  font-weight: 700;
+  transition: .2s;
+}
+
+.sc-signup-header nav a:hover {
+  color: white;
+}
+
+/* SIGNUP MAIN */
+
+.sc-signup-main {
+  min-height: calc(100vh - 120px);
+  display: grid;
+  grid-template-columns: 38% 62%;
+  align-items: center;
+  gap: 25px;
+  max-width: 1250px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* WELCOME SECTION */
+
+.sc-signup-welcome {
+  padding: 30px;
+}
+
+.sc-hospital-symbol {
+  width: 220px;
+  height: 190px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.sc-symbol-glow {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: #16d8eb;
+  border-radius: 50%;
+  filter: blur(45px);
+  opacity: .45;
+}
+
+.sc-hospital-cross {
+  width: 135px;
+  height: 135px;
+  display: grid;
+  place-items: center;
+  color: #12d9ee;
+  position: relative;
+  border: 3px solid #ffffff55;
+  border-radius: 30px;
+  background: #ffffff15;
+  box-shadow: 0 15px 35px #132e8c35;
+  animation: scPulse 4s ease-in-out infinite;
+}
+
+.sc-hospital-cross > svg:first-child {
+  position: absolute;
+  opacity: .5;
+}
+
+.sc-hospital-cross > svg:last-child {
+  position: relative;
+  color: white;
+}
+
+@keyframes scPulse {
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 45px #132e8c55;
+  }
+}
+
+.sc-signup-welcome h1 {
+  font-size: 36px;
+  line-height: 1.3;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.sc-signup-welcome h1 span {
+  color: #a6f3ff;
+}
+
+.sc-signup-welcome > p {
+  color: #e2f6ff;
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 360px;
+}
+
+.sc-welcome-points {
+  display: grid;
+  gap: 13px;
+  margin-top: 25px;
+}
+
+.sc-welcome-points span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: white;
+}
+
+/* SIGNUP CARD */
+
+.sc-signup-card {
+  background: #fff;
+  color: #25364c;
+  border-radius: 65px 8px 8px 65px;
+  padding: 35px 45px;
+  min-height: 440px;
+  box-shadow: 0 20px 65px #103b7940;
+  position: relative;
+}
+
+/* ROLE TABS */
+
+.sc-role-tabs {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0;
+  margin-bottom: 10px;
+}
+
+.sc-role-tabs button {
+  padding: 9px 17px;
+  border: 1px solid #1675c6;
+  background: white;
+  color: #176ab2;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: .2s;
+}
+
+.sc-role-tabs button:first-child {
+  border-radius: 20px 0 0 20px;
+}
+
+.sc-role-tabs button:last-child {
+  border-radius: 0 20px 20px 0;
+}
+
+.sc-role-tabs button.selected {
+  background: #126ac1;
+  color: white;
+}
+
+.sc-signup-card h2 {
+  text-align: center;
+  font-size: 23px;
+  color: #48566a;
+  margin: 12px 0 7px;
+}
+
+.sc-signup-subtitle {
+  text-align: center;
+  font-size: 11px;
+  color: #98a4b1;
+  margin-bottom: 22px;
+}
+
+/* SIGNUP FIELDS */
+
+.sc-signup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px 18px;
+}
+
+.sc-signup-field {
+  height: 45px;
+  border: 1px solid #dce5ed;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 12px;
+  color: #9ba9b8;
+  background: white;
+  transition: .25s;
+  min-width: 0;
+}
+
+.sc-signup-field:focus-within {
+  border-color: #1789d2;
+  box-shadow: 0 0 0 3px #1689d212;
+}
+
+.sc-signup-field input,
+.sc-signup-field select {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #45576b;
+  font-size: 11px;
+}
+
+.sc-signup-field input::placeholder {
+  color: #9aa8b5;
+}
+
+.sc-signup-field select {
+  cursor: pointer;
+}
+
+.sc-signup-field input[type="date"] {
+  font-size: 10px;
+}
+
+.sc-extra-field {
+  margin-top: 14px;
+}
+
+.sc-signup-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.sc-gender-note {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #8b9baa;
+  font-size: 10px;
+}
+
+.sc-register-btn {
+  min-width: 125px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  background: linear-gradient(100deg,#0865b6,#087fd2);
+  font-size: 12px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.sc-register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px #0875c440;
+}
+
+.sc-signup-login {
+  text-align: center;
+  font-size: 11px;
+  color: #8b9baa;
+  margin-top: 22px;
+}
+
+.sc-signup-login a {
+  color: #087bc4;
+  font-weight: 800;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+  .sc-auth-login {
+    grid-template-columns: 38% 62%;
+  }
+
+  .sc-login-visual {
+    padding: 35px 7%;
+  }
+
+  .sc-login-form-side {
+    padding: 35px 6%;
+  }
+
+  .sc-signup-main {
+    grid-template-columns: 32% 68%;
+    gap: 10px;
+  }
+
+  .sc-signup-card {
+    padding: 30px 25px;
+  }
+
+  .sc-signup-welcome {
+    padding: 15px;
+  }
+
+  .sc-signup-welcome h1 {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .sc-auth-login {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sc-login-visual {
+    display: none;
+  }
+
+  .sc-login-form-side {
+    min-height: 100vh;
+    padding: 35px 22px;
+  }
+
+  .sc-mobile-brand {
+    display: flex;
+  }
+
+  .sc-login-form h1 {
+    font-size: 27px;
+  }
+
+  .sc-signup-page {
+    padding: 0 5% 35px;
+  }
+
+  .sc-signup-header {
+    height: 68px;
+  }
+
+  .sc-signup-header nav {
+    gap: 13px;
+  }
+
+  .sc-signup-header nav a {
+    font-size: 9px;
+  }
+
+  .sc-signup-brand {
+    font-size: 17px;
+  }
+
+  .sc-signup-main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .sc-signup-welcome {
+    width: 100%;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .sc-hospital-symbol {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 8px;
+  }
+
+  .sc-hospital-cross {
+    width: 85px;
+    height: 85px;
+  }
+
+  .sc-hospital-cross > svg:first-child {
+    width: 60px;
+  }
+
+  .sc-signup-welcome h1 {
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+
+  .sc-signup-welcome > p {
+    font-size: 11px;
+    margin: auto;
+  }
+
+  .sc-welcome-points {
+    display: none;
+  }
+
+  .sc-signup-card {
+    width: 100%;
+    border-radius: 28px;
+    padding: 25px 18px;
+    min-height: auto;
+  }
+
+  .sc-role-tabs button {
+    padding: 9px 10px;
+    font-size: 10px;
+  }
+
+  .sc-signup-card h2 {
+    font-size: 20px;
+  }
+
+  .sc-signup-grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .sc-signup-field {
+    height: 47px;
+  }
+
+  .sc-signup-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sc-register-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .sc-role-tabs button {
+    padding: 8px;
+    font-size: 9px;
+  }
+
+  .sc-social-buttons {
+    gap: 8px;
+  }
+
+  .sc-signup-header nav {
+    gap: 8px;
+  }
+}
+
+/* =========================================
+   SMARTCARE AUTH - TYPOGRAPHY UPGRADE
+========================================= */
+
+/* GLOBAL AUTH FONT */
+.sc-auth-login,
+.sc-signup-page {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+/* Login main heading */
+.sc-login-form h1 {
+  font-size: 36px !important;
+  font-weight: 800 !important;
+  line-height: 1.25;
+  letter-spacing: -1px;
+  color: #19283c;
+}
+
+/* Login subtitle */
+.sc-form-subtitle {
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+  font-weight: 500 !important;
+  color: #718096;
+}
+
+/* Login labels */
+.sc-login-form form > label {
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: #293c53;
+  margin-top: 22px !important;
+}
+
+/* Login input */
+.sc-input-wrap {
+  min-height: 53px !important;
+}
+
+.sc-input-wrap input {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.sc-input-wrap input::placeholder {
+  font-size: 13px !important;
+  font-weight: 500;
+}
+
+/* Remember me */
+.sc-login-options {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+.sc-remember {
+  font-weight: 700 !important;
+}
+
+/* Forgot password */
+.sc-login-options a {
+  font-weight: 800 !important;
+}
+
+/* Login button */
+.sc-login-submit {
+  min-height: 53px !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+}
+
+/* Social login */
+.sc-social-buttons button {
+  min-height: 48px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+/* Divider */
+.sc-auth-divider {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+/* Signup link */
+.sc-auth-switch {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.sc-auth-switch a {
+  font-weight: 800 !important;
+}
+
+/* Security text */
+.sc-login-security {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+/* Left login panel */
+.sc-login-message h2 {
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  line-height: 1.35;
+}
+
+.sc-login-message p {
+  font-size: 14px !important;
+  line-height: 1.9 !important;
+  font-weight: 500 !important;
+}
+
+.sc-auth-logo {
+  font-size: 25px !important;
+  font-weight: 800 !important;
+}
+
+/* =========================================
+   SIGNUP PAGE
+========================================= */
+
+/* Signup brand */
+.sc-signup-brand {
+  font-size: 25px !important;
+  font-weight: 800 !important;
+}
+
+/* Welcome heading */
+.sc-signup-welcome h1 {
+  font-size: 42px !important;
+  font-weight: 800 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -1px;
+}
+
+/* Welcome description */
+.sc-signup-welcome > p {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  line-height: 1.9 !important;
+}
+
+/* Welcome points */
+.sc-welcome-points span {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+/* Role tabs */
+.sc-role-tabs button {
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  padding: 11px 17px !important;
+}
+
+/* Signup heading */
+.sc-signup-card h2 {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: #253c55 !important;
+}
+
+/* Signup subtitle */
+.sc-signup-subtitle {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+/* Signup input fields */
+.sc-signup-field {
+  min-height: 49px !important;
+}
+
+.sc-signup-field input,
+.sc-signup-field select {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+.sc-signup-field input::placeholder {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+/* Terms and conditions */
+.sc-signup-terms label {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+/* Register button */
+.sc-register-btn {
+  min-height: 47px !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+
+/* Login link */
+.sc-signup-login {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.sc-signup-login a {
+  font-weight: 800 !important;
+}
+
+/* Signup security */
+.sc-signup-security {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+/* =========================================
+   MOBILE FONT ADJUSTMENTS
+========================================= */
+
+@media(max-width:650px) {
+
+  .sc-login-form h1 {
+    font-size: 30px !important;
+  }
+
+  .sc-form-subtitle {
+    font-size: 14px !important;
+  }
+
+  .sc-login-form form > label {
+    font-size: 14px !important;
+  }
+
+  .sc-signup-welcome h1 {
+    font-size: 30px !important;
+  }
+
+  .sc-signup-welcome > p {
+    font-size: 13px !important;
+  }
+
+  .sc-signup-card h2 {
+    font-size: 24px !important;
+  }
+
+  .sc-role-tabs button {
+    font-size: 11px !important;
+    padding: 10px !important;
+  }
+
+  .sc-signup-field input,
+  .sc-signup-field select {
+    font-size: 14px !important;
+  }
+}
